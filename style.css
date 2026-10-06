@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo-pagina: url("fundorosacity.avif");
+    --fundo-card: #ffffff;
+    --titulo: rgb(228, 84, 163);
+    --cargo: hsl(330, 54%, 54%);
+    --texto: black;
+    --botao: rgb(223, 176, 176);
+    --botao-hover: rgb(243, 192, 192);
+}
+
+.tema-escuro {
+    --fundo-pagina: url("fundoroxo2.jpg");
+    --fundo-card: #2f0a44;
+    --titulo: #ffffff;
+    --cargo: #dddddd;
+    --texto: #ffffff;
+    --botao: #4a2e61;
+    --botao-hover: #351252;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-image: var(--fundo-pagina);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    background: var(--fundo-card);
+
+    width: 390px;
+    padding: 32px 24px;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 3px solid rgba(253, 184, 253, 0.8);
+}
+
+h1 {
+    font-size: 1.4rem;
+    color: var(--titulo);
+}
+
+.cargo {
+    color: var(--cargo);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.bio {
+    color: var(--texto);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.links a {
+    display: block;
+    text-decoration: none;
+
+    background: var(--botao);
+    color: white;
+
+    padding: 10px 16px;
+    border-radius: 30px;
+
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.links a:hover {
+    background: var(--botao-hover);
+    transform: translateY(-2px);
+    color: rgb(180, 117, 117);
+}
+
+/* BOTÃO DE TEMA */
+
+#botao-tema {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    border: none;
+    border-radius: 50%;
+
+    width: 45px;
+    height: 45px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
